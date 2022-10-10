@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Virtual Workout Trainer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+
+ <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> -
+ <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+<script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main_page.css">
+</head>
+
+<body>
+
+<header>
+    <div class="menu">
+        <div class="logo">
+            <img src="LOGO3.white.png">
+
+        </div>
+        <ul>
+          <li> <a href="index.html">Home</a> </li>
+          <li class="active"> <a href="main_page.html">Main Page</a></li>
+          <li> <a href="instruction.html">Instructions</a> </li>
+          <li> <a href="about.html">about us</a> </li>
+        </ul>
+
+    </div>
+    <div class="title">
+        <h1>VIRTUAL WORKOUT TRAINER</h1>
+    </div>
+    
+    
+    <div class="main"> 
+  
+      <div class="box" id="todo"> 
+        <div id ="myDiv" >
+          <h1>TO DO : </h1>
+          <ol>
+
+            <li >
+                <div class="flex-box">
+                  <p>SQUATS</p>  
+                  <button class="btn active" onclick="startClassify('squat' , 2,0)" > Start </button>
+                </div>
+                
+                <div class="flex-box">
+                  <p>Assigned sets : </p>  
+                  <p id="squat-sets">  ""</p>
+                </div>
+                <div class="flex-box">
+                  <p>Completed Sets : </p>  
+                  <p id="squat-completed-sets">  1</p>
+                </div>
+
+                <div class="flex-box">
+                  <p>Assigned reps : </p>  
+                  <p id="squat-reps">  ""</p>
+                </div>
+                <div class="flex-box">
+                  <p>Completed Reps : </p>  
+                  <p id="squat-completed-reps"> :  1</p>
+                </div>
+                
+
+            </li>
+            <li>  
+              <div class="flex-box">
+                <p>PUSH UPS</p>  
+                <button class="btn active" onclick="startClassify('pushup' , 2,1)" > Start </button>
+              </div>
+              
+              <div class="flex-box">
+                <p>Assigned sets : </p>  
+                <p id="pushup-sets">  ""</p>
+              </div>
+              <div class="flex-box">
+                <p>Completed Sets : </p>  
+                <p id="pushup-completed-sets">  1</p>
+              </div>
+
+              <div class="flex-box">
+                <p>Assigned reps : </p>  
+                <p id="pushup-reps">  ""</p>
+              </div>
+              <div class="flex-box">
+                <p>Completed Reps : </p>  
+                <p id="pushup-completed-reps"> :  1</p>
+              </div>
+             
+            </li>
+            
+            <li>
+              <div class="flex-box">
+                <p>SIT UPS</p>  
+                <button class="btn active" onclick="startClassify('situp' , 2,2)" > Start </button>
+              </div>
+              
+              <div class="flex-box">
+                <p>Assigned sets : </p>  
+                <p id="situp-sets">  ""</p>
+              </div>
+              <div class="flex-box">
+                <p>Completed Sets : </p>  
+                <p id="situp-completed-sets">  1</p>
+              </div>
+
+              <div class="flex-box">
+                <p>Assigned reps : </p>  
+                <p id="situp-reps">  ""</p>
+              </div>
+              <div class="flex-box">
+                <p>Completed Reps : </p>  
+                <p id="situp-completed-reps"> :  1</p>
+              </div>
+             
+            </li>
+            
+            <li>
+              <div class="flex-box">
+                <p>STANDING CLIMB</p>  
+                <button class="btn active" onclick="startClassify('standingclimb' , 2,3)" > Start </button>
+              </div>
+              
+              <div class="flex-box">
+                <p>Assigned sets : </p>  
+                <p id="standingclimb-sets">  ""</p>
+              </div>
+              <div class="flex-box">
+                <p>Completed Sets : </p>  
+                <p id="standingclimb-completed-sets">  1</p>
+              </div>
+
+              <div class="flex-box">
+                <p>Assigned reps : </p>  
+                <p id="standingclimb-reps">  ""</p>
+              </div>
+              <div class="flex-box">
+                <p>Completed Reps : </p>  
+                <p id="standingclimb-completed-reps"> :  1</p>
+              </div>
+             
+            </li>
+
+          </ol>
+     
+          <button onclick="giveSummary()">END </button>
+          <script>
+         
+          </script>
+      </div>
+
+      </div>
+
+
+      <div class="canvas-box">
+        
+        <div  id ="canvas">  </div>
+        <button class="increasize" onclick="changesckelton()">skelton</button>
+
+        
+
+      </div>
+      
+
+      <div class="box" id="instruction">
+
+
+        <div class="screenshots" id="screenshots"> 
+          <div class ="align">
+            <h4> ==  Positions To Consider ==</h4>
+            <div class= "screenshots ">
+
+                <img id="img1" src="front1.jpg" class="img1" />
+                <img id="img2" src="front1.jpg" class="img1" />
+
+            
+            </div>
+
+          </div>
+        </div>
+
+        <!-- <div>
+          <div>
+            <h3>Current Workout</h3>
+            <p> Push Ups</p>
+          </div>
+  
+          <div id = "canvas1"></div>
+          
+          <div>
+            <h3> Instructions</h3>
+            <p>  </p>
+          </div>
+  
+        </div> -->
+      </div>
+
+   </div>
+
+  <div class="summary" id="summary">
+    <div>
+      <h1> SUMMARY : </h1>
+      <h2>Today's Workout </h2>
+      <!-- <button class= "btn" onclick = "jeetkarasta(2)">submit</button> -->
+      <div id="summary-output"></div>
+    </div>
+  </div>
+
+  <div class="improvement">
+    <div class="previous"  id="previous">
+      <h2>Previous Data</h2>
+    </div>
+
+    <hr>
+    <div  class="improvement-box" id="improvement">
+      <h2> Improvement Data</h2>
+    </div>
+
+  </div>
+
+
+  <!-- <script type="text/babel" src="app.js"></script> -->
+  <script  src="demo.js"></script>
+
+</body>
+</html>
+
+</header>
+
+</body>
+
+</html>

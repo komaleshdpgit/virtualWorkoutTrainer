@@ -1,0 +1,277 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    font-family: Century Gothic;
+}
+
+header{
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(../front5.jpg);
+height: 100vh;
+background-size: cover;
+background-position: center;
+}
+
+  ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+	margin-right: 15px;
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+
+ .logo img{
+     position: absolute;
+     top: 25px;
+     left: 30px;
+     width: 50px;
+     height: 50px;
+
+ }
+ 
+ .main{
+     max-width: 1200px;
+     margin: auto;
+ }
+
+.title{
+    position: absolute;
+    top: 7%;
+    left: 17%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    color: #808080;
+    font-size: 20px;
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Century Gothic;
+}
+
+ /* header{
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(front5.jpg);
+height: 100vh;
+background-size:contain;
+background-position: center;
+}  */
+body {
+    background-color: grey;
+   }
+
+  ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+	margin-right: 15px;
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+
+ .logo img{
+     position: absolute;
+     top: 25px;
+     left: 30px;
+     width: 50px;
+     height: 50px;
+
+ }
+ 
+ .menu{
+     max-width: 1200px;
+     margin: auto;
+ }
+
+.title{
+    position: absolute;
+    top: 7%;
+    left: 17%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    color: #080808;
+    font-size: 20px;
+}
+
+ 
+
+
+.button li a{
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6 ease;
+    cursor: pointer;
+    background-color: rgb(26, 23, 23);
+
+}
+.button li a:hover{
+    background-color :white;
+    color: rgb(0, 0, 0);
+
+}
+
+.title h1{
+	color: #131010;
+	font-size: 20px;
+}
+
+.main{
+    display: flex;
+    top: 200px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+
+.box{
+    margin-top: 40px;
+    border: 1px black solid;
+    margin: 0 auto;
+    padding: 10px;
+    /* text-align: center; */
+}
+
+#todo{
+    margin-top: 40px;
+    width: 20%;
+    text-align: center;
+}
+
+.canvas-box{
+    margin-top: 40px;
+    margin: 20px auto;
+    border: 1px black solid;
+    padding: 10px;
+}
+#canvas{
+    /* width: 100%;
+    height: 100%; */
+    color: black;
+    margin-top: 40px;
+    text-align: center;
+    width: 900px;
+    height: 600px;
+    aspect-ratio: auto 1800/1200;
+
+}
+
+.summary{
+
+    width: 70%;
+    padding: 20px;
+    margin: auto;
+    border: 1px black solid;
+}
+
+.screenshots{
+    
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+    .img1
+    {
+        text-align: center;
+        width: 150px;
+        height: 100px;
+        border: 2px solid black;
+        margin: 10px;
+        padding: 5px;
+    }
+
+.align{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.flex-box{
+    display: flex;
+}
+li{
+    padding: 10px;
+
+}
+
+.improvement{
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    margin: 5px auto;
+    border: 1px black solid;
+}
+
+.previous{
+    text-align: start;
+    padding: 20px;
+    margin: auto;
+}
+.improvement-box{
+    padding: 20px;
+    margin: auto;
+    text-align: start;
+}
+
+button{
+     margin: 10px auto ; 
+    margin: 10px; 
+    outline: none;
+    width: 80px;
+    height: 25px; 
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    
+}
+.active, button:hover {
+    background-color: #666;
+    color: white;
+  }

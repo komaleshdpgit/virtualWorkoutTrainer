@@ -16,3 +16,6 @@ used and Javascript as a machine language to execute the programs.
 •	  The user will select the workout method and the system will display the
 steps to perform the respective activity and keep track of the body postures
 and will count the repetitions and sets completed by the user.
+![image](https://user-images.githubusercontent.com/86582685/194894980-2e7cd502-c833-46f5-b6f1-1723f6536686.png)
+![image](https://user-images.githubusercontent.com/86582685/194895304-dfccbca8-f30b-4338-b33e-c48041515c19.png)
+
